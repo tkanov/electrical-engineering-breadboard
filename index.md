@@ -40,3 +40,26 @@ The outputs are connected to LEDs to easily observe their states. Gates act inde
 
 ---
 
+
+## Project #3
+### Using Arduino Nano to blink a green and red LEDs
+
+Make sure GNDs are connected.
+
+Pushbuttons were not supposed to be there, so please ignore them.
+
+Code:
+
+[will paste here]
+
+
+
+
+![Image](attachments/ee-5.jpeg)
+![Image](attachments/ee-6.jpeg)
+![Image](attachments/ee-7.jpeg)
+![Image](attachments/ee-8.jpeg)
+
+
+---
+

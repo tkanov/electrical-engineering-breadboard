@@ -46,13 +46,51 @@ The outputs are connected to LEDs to easily observe their states. Gates act inde
 ## Project #3
 ### Using Arduino Nano to blink a green and red LEDs
 
-Make sure GNDs are connected.
+[!] Make sure GNDs are connected
 
-Pushbuttons were not supposed to be there, so please ignore them.
+(Pushbuttons were not supposed to be there, so please ignore them)
 
-Code:
+#### Code:
 
-[will paste here]
+- Blinks the 2 LEDs with different intervals.
+- LED pins 1 and 2 are connected to PN2222 Base.
+
+```
+const int led1Pin = 4;
+const int led2Pin = 5;
+
+const unsigned long led1IntervalMs = 250;
+const unsigned long led2IntervalMs = 350;
+
+unsigned long lastLed1 = 0;
+unsigned long lastLed2 = 0;
+
+bool led1State = false;
+bool led2State = false;
+
+void setup() {
+  pinMode(led1Pin, OUTPUT);
+  pinMode(led2Pin, OUTPUT);
+  digitalWrite(led1Pin, LOW);
+  digitalWrite(led2Pin, LOW);
+}
+
+void loop() {
+  unsigned long now = millis();
+
+  if (now - lastLed1 >= led1IntervalMs) {
+    lastLed1 = now;
+    led1State = !led1State;
+    digitalWrite(led1Pin, led1State ? HIGH : LOW);
+  }
+
+  if (now - lastLed2 >= led2IntervalMs) {
+    lastLed2 = now;
+    led2State = !led2State;
+    digitalWrite(led2Pin, led2State ? HIGH : LOW);
+  }
+}
+```
 
 
 #### On the board:
@@ -161,4 +199,6 @@ On the first picture below R was pressed, so the Q is LOW, and "not Q" is HIGH (
 
 
 ---
+
+
 

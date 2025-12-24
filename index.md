@@ -161,11 +161,11 @@ I_C ≈ 21.7 mA
 
 
 ## Project #4
-### Implementing 1 bit of memory 
+### Implementing 1 bit of memory - SR latch
 
-The "memory" is built on an SR latch using 2 NOR gates.
+The "memory" is built on an **SR latch** using 2 analog **NOR gates**.
 
-The two chips below implement NOR gates because I didn't have a single NOR chip). There are 2 NOR gates on the board, as needed to implement a single SR latch device.
+The two chips below implement NOR gates because I didn't have a single NOR chip. There are 2 NOR gates on the board, as needed to implement a single SR latch device with 2 imputs (S, R) and 1 output Q.
 
 - `SN74HC32N (7432)`  [SNx4HC32 Quadruple 2-Input OR Gates](docs/sn74hc32.pdf)
 - `SN74HC04N (7404)`  [SNx4HC04 Hex Inverters](docs/sn74hc04.pdf)
@@ -200,5 +200,12 @@ On the first picture below R was pressed, so the Q is LOW, and "not Q" is HIGH (
 
 ---
 
+
+
+
+## Project #5
+### Implementing 1 bit of memory - Arduino code
+
+This time the "memory" is built on an **SR latch** using a C function that implements NOR gates instead of analog (hardware) logic gates.
 
 

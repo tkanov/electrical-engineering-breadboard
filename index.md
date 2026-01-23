@@ -1,4 +1,15 @@
-The projects below are a small lab log of breadboard experiments with 74xx logic ICs and an Arduino Nano (power distribution and NPN transistor LED drivers).
+The projects below are a small lab log of breadboard experiments with logic ICs (like the 74xx series) and an Arduino Nano (power distribution, NPN transistors, LED drivers and the like).
+
+## Index
+
+1. OR, AND gates
+2. Using Arduino Nano to power the Breadboard (5V)
+3. Using Arduino Nano to blink a green and red LEDs
+4. Implementing 1 bit of memory - SR latch
+5. Implementing 1 bit of memory - with Arduino code
+6. LED chaser with a 555 timer and a CD4017 IC 
+
+
 
 ---
 
@@ -261,4 +272,58 @@ void loop() {
 
 
 ---
+
+
+
+
+
+## Project #6
+### LED chaser with a 555 timer and a CD4017 IC
+
+
+#### 1) Clock generator (NE555 astable)
+
+**Parts used**
+
+* NE555 as an astable oscillator
+* Timing resistors: 10 kΩ + 2 MΩ
+* Timing capacitor: 0.1 µF
+* Control-pin decoupling: 0.1 µF on pin 5 (CTRL) to GND
+* Recommended: 100 nF decoupling between VCC and GND close to the 555
+
+**Wiring**
+
+* The 555 sits straddling the breadboard's center gap.
+* Pin 3 (OUT) is the "clock" line running from the 555 area to the CD4017.
+
+
+---
+
+#### 2) Sequencer (CD4017 decade counter)
+
+**Parts used**
+
+* CD4017
+* The **clock input** of the 4017 is fed from **555 pin 3**.
+
+
+---
+
+#### 3) LED outputs
+
+Direct CD4017 to LED: LED series resistors: 330 Ω, one per LED
+
+
+
+---
+
+### Power and build notes
+
+* Supply: 5 V
+* Optionally add decoupling caps (100 nF) close to each IC between VCC and GND (helps stability and reduces weird flicker). However, I didn't do it.
+* Assembly/testing order from my notes:
+
+  1. Build and verify the 555 clock first (I used a debug LED) and a multumeter to measure clock signal voltage.
+  2. Add the CD4017 and confirm the LEDs "chase".
+  3. Then add the transistor-driven outputs.
 

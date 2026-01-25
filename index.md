@@ -287,8 +287,8 @@ void loop() {
 
 * NE555 as an astable oscillator
 * Timing resistors: 10 kΩ + 2 MΩ
-* Timing capacitor: 0.1 µF
-* Control-pin decoupling: 0.1 µF on pin 5 (CTRL) to GND
+* Timing capacitor: 0.1 µF. Later added 2x 0.1 µF to slow down the "chasing"
+* Control-pin decoupling: 0.1 µF on pin 5 (CTRL) to GND.
 * Recommended: 100 nF decoupling between VCC and GND close to the 555
 
 **Wiring**
@@ -311,19 +311,34 @@ void loop() {
 
 #### 3) LED outputs
 
-Direct CD4017 to LED: LED series resistors: 330 Ω, one per LED
-
-
+Direct CD4017 to LED: red LED series resistors: 330 Ω, one per LED
 
 ---
 
 ### Power and build notes
 
 * Supply: 5 V
-* Optionally add decoupling caps (100 nF) close to each IC between VCC and GND (helps stability and reduces weird flicker). However, I didn't do it.
-* Assembly/testing order from my notes:
+* Optional decoupling caps (100 nF) close to each IC between VCC and GND (helps stability and reduces weird flicker). I didn't do it on the pictures.
+* Assembly/testing order:
 
   1. Build and verify the 555 clock first (I used a debug LED) and a multumeter to measure clock signal voltage.
   2. Add the CD4017 and confirm the LEDs "chase".
   3. Then add the transistor-driven outputs.
+
+
+### Images
+
+![Image](attachments/ee-16.jpeg)
+
+![Image](attachments/ee-17.jpeg)
+
+![Image](attachments/ee-18.jpeg)
+
+![Image](attachments/ee-19.jpeg)
+
+![Image](attachments/ee-20.jpeg)
+
+
+---
+
 

@@ -38,7 +38,7 @@ This is the part that counts from 0 to 9 and lights up the LEDs. Each step of th
 
 #### 3) LED outputs
 
-Direct CD4017 to LED: red LED series resistors: 330 Ω, one per LED
+Direct CD4017 to LED: red LED series resistors: 330 Ω, one per LED  x7
 
 ---
 
@@ -65,4 +65,3 @@ Direct CD4017 to LED: red LED series resistors: 330 Ω, one per LED
 ![Image](../attachments/ee-20.jpeg)
 
 ---
-```

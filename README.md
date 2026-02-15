@@ -12,6 +12,7 @@ This repository contains notes and pictures of breadboard experiments.
 5. [Project 5 — Implementing 1 bit of memory - Arduino code](projects/project-05-sr-latch-code.md)
 6. [Project 6 — LED chaser with a 555 timer and a CD4017 IC](projects/project-06-led-chaser.md)
 7. [Project 7 — Optocoupler implemented on a breadboard](projects/project-07-optocoupler.md)
+8. [Project 8 — Voltage divider](projects/project-08-voltage-divider.md)
 
 ---
 

@@ -14,11 +14,18 @@ A voltage divider is a circuit that reduces an input voltage to a lower output v
 
 The voltage divider formula calculates the output voltage as:
 
-$$V_{out} = \frac{R_2}{R_1 + R_2} \times V_{in}$$
+```
+Vout = (R2 / (R1 + R2)) × Vin
+```
 
 Substituting the values:
 
-$$V_{out} = \frac{220}{20 + 220} \times 5 = \frac{220}{240} \times 5 = 0.9167 \times 5 = 4.58V$$
+```
+Vout = (220 / (20 + 220)) × 5
+Vout = (220 / 240) × 5
+Vout = 0.9167 × 5
+Vout = 4.58V
+```
 
 This gives us approximately **4.5V** at the output, which matches the target specification.
 
